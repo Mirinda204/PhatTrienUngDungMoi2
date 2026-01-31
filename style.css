@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain; /* QUAN TRỌNG: hiển thị toàn bộ hình */
+}
+/* Zebra table: 1 dòng đen – 1 dòng trắng */
+/* Zebra table: 1 dòng trắng – 1 dòng đen rõ ràng (không hiệu ứng hover) */
+/* Dòng lẻ: trắng với chữ đen */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dòng chẵn: nền đen, chữ trắng */
+tbody tr:nth-child(even) {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Loại bỏ hiệu ứng hover để không đổi màu khi rê chuột */
+/* Nếu cần hover trở lại, bỏ comment phần này và điều chỉnh màu */
+/* tbody tr:hover {
+    background-color: #dcdcdc;
+    transition: 0.2s;
+} */
+
+/* Đảm bảo ô (td/th) kế thừa màu chữ từ dòng */
+tbody tr td,
+tbody tr th {
+    color: inherit;
+}
